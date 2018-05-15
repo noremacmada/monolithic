@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Integration with Express
 
-This project is designed to be run as an Express app.  In order to do so, two command windows be opened.  In one, run command$: ng build --watch.  In the other, run command node server/server.js.
+This project is designed to be run as an Express app.  In order to do so, two command windows be opened.  In one, run command$: ng build --watch.  In the other, run command$: nodemon [--inspect] server/server.js.

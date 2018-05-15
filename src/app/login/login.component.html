@@ -1,0 +1,59 @@
+<form>
+  <div class="form-group">
+    <label for="tbxUsername">Username</label>
+    <input
+      id="tbxUsername"
+      type="text"
+      class="form-control"
+      aria-describedby="msgUsername"
+      placeholder="Enter username"
+      name="username"
+      [(ngModel)]="this.username"
+    />
+    <small id="msgUsername" class="form-text text-muted">{{this.msgUsername}}</small>
+  </div>
+  <div class="form-check">
+    <input
+      id="cbxCreate"
+      type="checkbox"
+      class="form-check-input"
+      [checked]="this.isCreate"
+      (click)="this.toggleIsCreate()"
+    />
+    <label class="form-check-label" for="cbxCreate">Create new user</label>
+  </div>
+  <div class="form-group">
+    <label for="pbxPassword">Password</label>
+    <input
+      id="pbxPassword"
+      type="password"
+      class="form-control"
+      aria-describedby="msgPassword"
+      placeholder="Enter password"
+      name="password"
+      [(ngModel)]="this.passport"
+    />
+    <small id="msgPassword" class="form-text text-muted">{{this.msgPassword}}</small>
+  </div>
+  <div class="form-group" *ngIf="this.isCreateMode">
+    <label for="pbxConfirm">Confirm password</label>
+    <input
+      id="pbxConfirm"
+      type="password"
+      class="form-control"
+      aria-describedby="msgConfirm"
+      placeholder="Confirm password"
+      name="confirm"
+      [(ngModel)]="this.confirm"
+    />
+  </div>
+  <small id="msgConfirm" class="form-text text-muted">{{this.msgConfirm}}</small>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    (click)="this.btnSubmit_Click()"
+  >
+    {{this.lblSubmit}}
+  </button>
+</form>
+{{this.msgBtnSubmit_Click}}
